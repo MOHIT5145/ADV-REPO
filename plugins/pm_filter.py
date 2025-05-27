@@ -2647,7 +2647,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                     else:
                         # Second LibGen fallback attempt
                         try:
-                            await reply_msg.edit_text(f"🔍 Trying alternative search for '{name}'...")
+                            await reply_msg.edit_text(f"🔍 Trying  '{name}'...")
                             results = await libgen_search(name)
                             
                             if results:
@@ -2670,11 +2670,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                             logger.error(f"Secondary LibGen error: {e}")
 
                         # Final fallback if all attempts fail
-                        return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**") 
+                        return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**") 
             
             
         else:
-            await reply_msg.edit_text("⚠️ Your message is too long. Please enter a shorter query (less than 100 characters).")
+            await reply_msg.edit_text("⚠️ Warning Don't Share Any Link.<br> Request Here Movies @motumovies")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
