@@ -2670,11 +2670,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                             logger.error(f"Secondary LibGen error: {e}")
 
                         # Final fallback if all attempts fail
-                        return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**") 
+                       return await reply_msg.edit_text(f"**⚠️ No File Found - <br> MSG HERE @WMOTUMOVIES **\n**Make Sure Spelling Is Correct.**") 
             
             
         else:
-            await reply_msg.edit_text("⚠️ Warning Don't Share Any Link.<br> Request Here Movies @motumovies")
+            await reply_msg.edit_text("⚠️ Warning Don't Share Any Link. <br> Request Here Movies @motumovies")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
