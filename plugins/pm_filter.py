@@ -2609,11 +2609,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             #     if settings["spell_check"]:
             #         return await advantage_spell_chok(client, name, msg, reply_msg, ai_search)
             #     else:
-            #         return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**")
+            #         return await reply_msg.edit_text(f"**⚠️ NO FILE FOUND - {name}**\n**Make Sure Spelling Is Correct.**")
 
             if not files: # if no files found
                 results = []
-                original_message = f"**⚠️ No File Found For Your Query - {name}. Initiating Deep Search**\n** Tr.**"
+                original_message = f"**⚠️ NO FILE FOUND - {name}. AGAIN SEARCHING**\n** Tr.**"
                 
                 try:
                     # First LibGen attempt
@@ -2674,7 +2674,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             
             
         else:
-            await reply_msg.edit_text("⚠️ Warning Don't Share Any Link. <br> Request Here Movies @motumovies")
+            await reply_msg.edit_text("⚠️ WARNING DON'T SHARE LINKS. <br> REQUEST HERE @WMOTUMOVIES")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
