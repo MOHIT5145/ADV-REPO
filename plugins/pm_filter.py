@@ -2609,11 +2609,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             #     if settings["spell_check"]:
             #         return await advantage_spell_chok(client, name, msg, reply_msg, ai_search)
             #     else:
-            #         return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**")
+            #         return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**")
 
             if not files: # if no files found
                 results = []
-                original_message = f"**⚠️ No File Found  - {name}.  Search**\n** Tr.**"
+                original_message = f"**⚠️ No File Found For Your Query - {name}. Initiating Deep Search**\n** Tr.**"
                 
                 try:
                     # First LibGen attempt
@@ -2670,11 +2670,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                             logger.error(f"Secondary LibGen error: {e}")
 
                         # Final fallback if all attempts fail
-                        return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**") 
+                        return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**") 
             
             
         else:
-            await reply_msg.edit_text("⚠️WARNING DON'T SHARE LINK <br. REQUEST HERE @MOTUMOVIES.")
+            await reply_msg.edit_text("⚠️ Your message is too long. Please enter a shorter query (less than 100 characters).")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
