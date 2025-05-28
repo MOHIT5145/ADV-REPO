@@ -9,8 +9,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'Rishav_rajput8')
-API_ID = int(environ.get('API_ID', '20348051'))
-API_HASH = environ.get('API_HASH', 'a2f5b4029b334b4b16e20baf43d55a57')
+API_ID = int(environ.get('API_ID', '27693415'))
+API_HASH = environ.get('API_HASH', '8dc020d35ff99813b494f20955d8c724')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
@@ -19,15 +19,15 @@ PICS = (environ.get('PICS', 'https://envs.sh/800.png')).split()
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6416933624').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5783103507').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002520532425'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002654068720'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002607391308').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002471849392').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
