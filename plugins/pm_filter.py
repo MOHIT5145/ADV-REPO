@@ -2609,15 +2609,15 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             #     if settings["spell_check"]:
             #         return await advantage_spell_chok(client, name, msg, reply_msg, ai_search)
             #     else:
-            #         return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**")
+            #         return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**")
 
             if not files: # if no files found
                 results = []
-                original_message = f"**⚠️ No File Found  - {name}. SEARCHING**\n** Tr.**"
+                original_message = f"**⚠️ No File Found For Your Query - {name}. Initiating Deep Search**\n** Tr.**"
                 
                 try:
                     # First LibGen attempt
-                    await reply_msg.edit_text(f"🔍 AGAIN SEARCHING '{name}'...")
+                    await reply_msg.edit_text(f"🔍 Doing a deep search for '{name}'...")
                     results = await libgen_search(name)
                     
                     if results:
@@ -2670,11 +2670,11 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                             logger.error(f"Secondary LibGen error: {e}")
 
                         # Final fallback if all attempts fail
-                        return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**") 
+                        return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**") 
             
             
         else:
-            await reply_msg.edit_text("⚠️ WARNING DON'T SHARE LINKS <br> REQUEST MOVIES @khushibots.")
+            await reply_msg.edit_text("⚠️ Your message is too long. Please enter a shorter query (less than 100 characters).")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
@@ -2864,7 +2864,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2876,7 +2876,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2902,7 +2902,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
                 break
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots{reqst_gle}")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies{reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
