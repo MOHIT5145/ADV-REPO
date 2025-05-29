@@ -2647,7 +2647,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                     else:
                         # Second LibGen fallback attempt
                         try:
-                                await reply_msg.edit_text(f"🔍 SEARCHING ...")
+                              await reply_msg.edit_text(f" SEARCHING'{name}'...")
                             results = await libgen_search(name)
                             
                             if results:
