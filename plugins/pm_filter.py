@@ -2674,7 +2674,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             
             
         else:
-            await reply_msg.edit_text("⚠️ Your message is too long. Please enter a shorter query (less than 100 characters).")
+            await reply_msg.edit_text("⚠️ ⚠️ WARNING DON'T SHARE LINKS  REQUEST MOVIES @khushibots..")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
