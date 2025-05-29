@@ -2617,7 +2617,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                 
                 try:
                     # First LibGen attempt
-                    await reply_msg.edit_text(f"🔍 SEARCHING ...")
+                    await reply_msg.edit_text(f"🔍 AGAIN SEARCHING '{name}'...")
                     results = await libgen_search(name)
                     
                     if results:
@@ -2647,7 +2647,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                     else:
                         # Second LibGen fallback attempt
                         try:
-                               await reply_msg.edit_text(f"🔍 Trying alternative search for '{name}'...")
+                            await reply_msg.edit_text(f"🔍 Trying alternative search for '{name}'...")
                             results = await libgen_search(name)
                             
                             if results:
@@ -2674,7 +2674,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             
             
         else:
-            await reply_msg.edit_text("⚠️ WARNING DON'T SHARE LINKS <br> REQUEST MOVIES @khushibots.")
+            await reply_msg.edit_text("⚠️ WARNING DON'T SHARE LINKS <br> REQUEST MOVIES @MOTUMOVIES.")
             return
     else:
         message = msg.message.reply_to_message  # msg will be callback query
@@ -2864,7 +2864,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2876,7 +2876,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2889,7 +2889,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     SPELL_CHECK[mv_id] = movielist
     if AI_SPELL_CHECK == True and vj_search == True:
         vj_search_new = False
-        vj_ai_msg = await reply_msg.edit_text("<b><i>SEARCHING AGAIN.</i></b>")
+        vj_ai_msg = await reply_msg.edit_text("<b><i>I Am Trying To Find Your Movie With Your Wrong Spelling.</i></b>")
         movienamelist = []
         movienamelist += [movie.get('title') for movie in movies]
         for techvj in movienamelist:
@@ -2902,7 +2902,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
                 break
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("MSG HERE", url=f"https://t.me/khushibots{reqst_gle}")
+            InlineKeyboardButton("MSG HERE", url=f"https://t.me/motumovies{reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
