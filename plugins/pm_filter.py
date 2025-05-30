@@ -2609,15 +2609,15 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             #     if settings["spell_check"]:
             #         return await advantage_spell_chok(client, name, msg, reply_msg, ai_search)
             #     else:
-            #         return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**")
+            #         return await reply_msg.edit_text(f"**⚠️ No File Found  <br>  MSG HERE @BOLOMOTU ")
 
             if not files: # if no files found
                 results = []
-                original_message = f"**⚠️ No File Found  - {name}. SEARCHING**\n** Tr.**"
+                original_message = f"**⚠️ No File Found  <br>  MSG HERE @BOLOMOTU SEARCHING**\n** Tr.**"
                 
                 try:
                     # First LibGen attempt
-                    await reply_msg.edit_text(f"🔍 AGAIN SEARCHING '{name}'...")
+                    await reply_msg.edit_text(f"🔍 AGAIN SEARCHING ")
                     results = await libgen_search(name)
                     
                     if results:
@@ -2670,7 +2670,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                             logger.error(f"Secondary LibGen error: {e}")
 
                         # Final fallback if all attempts fail
-                        return await reply_msg.edit_text(f"**⚠️ No File Found  - {name}**\n**Make Sure Spelling Is Correct.**") 
+                        return await reply_msg.edit_text(f"**⚠️ No File Found   <br>  MSG HERE @BOLOMOTU") 
             
             
         else:
