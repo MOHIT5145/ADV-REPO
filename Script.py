@@ -201,13 +201,26 @@ Nᴀᴍᴇ - {}"""
 
     I_CUDNT = """<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ  😕
 
-MSG HERE MOVIE NAME 👇
+This Movie Not Found in Database
+
+⭕️ Just Type Movie Name with Year
+⭕️ For Example "Marco 2024"
+⭕️ Search in Google for Correct Spelling & Try Again ✅ 
+
+Request for This Movie to admin  👇
 🚯➠ @bolomotu </b>"""
 
     I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ.
 ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ..."""
 
-    MVE_NT_FND = """ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ..."""
+    MVE_NT_FND = """This Movie Not Found in Database
+
+⭕️ Just Type Movie Name with Year
+⭕️ For Example "Marco 2024"
+⭕️ Search in Google for Correct Spelling & Try Again ✅ 
+
+Request for This Movie to admin  👇
+🚯➠ @bolomotu..."""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
