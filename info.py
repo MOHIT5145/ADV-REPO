@@ -57,16 +57,16 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://wrrohit0004:<@Vip_demovideo_bot>@cluster0.tbp7ocp.mongodb.net/?appName=Cluster0")   # IF Multiple Database Is False Then Fill Only This Database Url.
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster123")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'coboho1618')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vanisal991_db_user:1HKO1k6xzU6U7OBy@cluster0.fpdjydt.mongodb.net/?appName=Cluster0")   # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vanisal991')
 
 MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', False)) # Set True or False
 
 # If Multiple Database Is True Then Fill All Three Below Database Uri Else You Will Get Error.
-O_DB_URI = environ.get('O_DB_URI', "mongodb+srv://wrrohit0004:<@Vip_demovideo_bot>@cluster0.tbp7ocp.mongodb.net/?appName=Cluster0")   # This Db Is For Other Data Store
-F_DB_URI = environ.get('F_DB_URI', "mongodb+srv://wrrohit0004:<@Vip_demovideo_bot>@cluster0.tbp7ocp.mongodb.net/?appName=Cluster0")   # This Db Is For File Data Store
-S_DB_URI = environ.get('S_DB_URI', "mongodb+srv://wrrohit0004:<@Vip_demovideo_bot>@cluster0.tbp7ocp.mongodb.net/?appName=Cluster0")   # This Db is for File Data Store When First Db Is Going To Be Full.
+O_DB_URI = environ.get('O_DB_URI', "mongodb+srv://vanisal991_db_user:1HKO1k6xzU6U7OBy@cluster0.fpdjydt.mongodb.net/?appName=Cluster0")   # This Db Is For Other Data Store
+F_DB_URI = environ.get('F_DB_URI', "mongodb+srv://vanisal991_db_user:1HKO1k6xzU6U7OBy@cluster0.fpdjydt.mongodb.net/?appName=Cluster0")   # This Db Is For File Data Store
+S_DB_URI = environ.get('S_DB_URI', "mongodb+srv://vanisal991_db_user:1HKO1k6xzU6U7OBy@cluster0.fpdjydt.mongodb.net/?appName=Cluster0")   # This Db is for File Data Store When First Db Is Going To Be Full.
 
 
 # Premium And Referal Settings
@@ -89,7 +89,7 @@ PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Us
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/motumoviess')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/motulinks')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'motulinks') # Support Chat Link Without https:// or @
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/wrrohit02')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/motumovies')
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
@@ -187,6 +187,7 @@ else:
     OTHER_DB_URI = O_DB_URI       # This Db Is For Other Data Store
     FILE_DB_URI = F_DB_URI        # This Db Is For File Data Store
     SEC_FILE_DB_URI = S_DB_URI    # This Db is for File Data Store When First Db Is Going To Be Full.
+
 
 
 
